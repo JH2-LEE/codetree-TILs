@@ -44,8 +44,8 @@ def toggle_noti(c):
             else:
                 message[par][k] += t
             cur = par
-            if noti[cur]:
-                break
+            # if noti[cur]:
+                # break
     noti[c] = not noti[c]  # 알람 변경
 
 def change_power(c, power):
@@ -65,8 +65,8 @@ def change_power(c, power):
         for j in range(power + 1 - i):
             message[par][j] += 1
         cur = par
-        # if noti[cur]:
-        #     break
+        if noti[cur]:
+            break
     auth[c] = power  # 권한 세기 업데이트
 
 for q in range(Q):
