@@ -65,8 +65,8 @@ def change_power(c, power):
         for j in range(power + 1 - i):
             message[par][j] += 1
         cur = par
-        if noti[cur]:
-            break
+        # if noti[cur]:
+            # break
     auth[c] = power  # 권한 세기 업데이트
 
 for q in range(Q):
