@@ -24,15 +24,13 @@ def toggle_noti(c):
     cur = c
     # print(message[c])
     for j in range(a):
-        # if not noti[cur]:
-        #     break
         par = chat_init[cur]
         if noti[c]:
             message[par][0] -= 1
         else:
             message[par][0] += 1
-        if not noti[cur]:
-            break
+        # if not noti[cur]:
+        #     break
         cur = par
 
 
@@ -58,7 +56,6 @@ def change_power(c, power):
     cur = c
     for i in range(1, a + 1):
         # print("cur, par", cur, par)
-
         par = chat_init[cur]
         for j in range(a + 1 - i):
             message[par][j] -= 1
@@ -68,7 +65,6 @@ def change_power(c, power):
 
     cur = c
     for i in range(1, power + 1):
-
         par = chat_init[cur]
         for j in range(power + 1 - i):
             message[par][j] += 1
