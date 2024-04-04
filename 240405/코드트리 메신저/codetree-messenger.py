@@ -90,7 +90,7 @@ for q in range(Q):
             for j in range(1,a+1):
                 par = chat_init[cur]
                 for k in range(a+1-j):
-                    if par==-1:
+                    if cur==-1:
                         continue
                     message[par][k] += 1
                 cur = par
