@@ -59,8 +59,8 @@ def change_power(c, power):
         par = chat_init[cur]
         for j in range(a + 1 - i):
             message[par][j] -= 1
-        if not noti[cur]:
-            break
+        # if not noti[cur]:
+        #     break
         cur = par
 
     cur = c
@@ -68,8 +68,8 @@ def change_power(c, power):
         par = chat_init[cur]
         for j in range(power + 1 - i):
             message[par][j] += 1
-        if not noti[cur]:
-            break
+        # if not noti[cur]:
+        #     break
         cur = par
 
     auth[c] = power  # 권한 세기 업데이트
