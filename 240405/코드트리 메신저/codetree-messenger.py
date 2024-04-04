@@ -24,14 +24,18 @@ def toggle_noti(c):
     cur = c
     # print(message[c])
     for j in range(a):
+        # if not noti[cur]:
+        #     break
         par = chat_init[cur]
         if noti[c]:
             message[par][0] -= 1
         else:
             message[par][0] += 1
-        cur = par
         if not noti[cur]:
             break
+        cur = par
+
+
     for aa, t in enumerate(message[c]):
         if aa == 0 or t == 0:
             continue
@@ -43,9 +47,10 @@ def toggle_noti(c):
                 message[par][k] -= t
             else:
                 message[par][k] += t
-            cur = par
             if not noti[cur]:
                 break
+            cur = par
+
     noti[c] = not noti[c]  # 알람 변경
 
 def change_power(c, power):
@@ -53,20 +58,24 @@ def change_power(c, power):
     cur = c
     for i in range(1, a + 1):
         # print("cur, par", cur, par)
+
         par = chat_init[cur]
         for j in range(a + 1 - i):
             message[par][j] -= 1
-        cur = par
         if not noti[cur]:
             break
+        cur = par
+
     cur = c
     for i in range(1, power + 1):
+
         par = chat_init[cur]
         for j in range(power + 1 - i):
             message[par][j] += 1
-        cur = par
         if not noti[cur]:
             break
+        cur = par
+
     auth[c] = power  # 권한 세기 업데이트
 
 for q in range(Q):
