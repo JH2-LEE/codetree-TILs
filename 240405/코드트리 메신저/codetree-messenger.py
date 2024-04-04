@@ -45,8 +45,8 @@ def toggle_noti(c):
                 message[par][k] -= t
             else:
                 message[par][k] += t
-            if not noti[cur]:
-                break
+            # if not noti[cur]:
+            #     break
             cur = par
 
     noti[c] = not noti[c]  # 알람 변경
