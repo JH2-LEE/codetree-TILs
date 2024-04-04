@@ -30,8 +30,8 @@ def toggle_noti(c):
         else:
             message[par][0] += 1
         cur = par
-        if noti[cur]:
-            break
+        # if noti[cur]:
+            # break
     for aa, t in enumerate(message[c]):
         if aa == 0 or t == 0:
             continue
