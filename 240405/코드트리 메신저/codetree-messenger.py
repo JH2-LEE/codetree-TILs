@@ -57,8 +57,8 @@ def change_power(c, power):
         for j in range(a + 1 - i):
             message[par][j] -= 1
         cur = par
-        # if noti[cur]:
-            # break
+        if noti[cur]:
+            break
     cur = c
     for i in range(1, power + 1):
         par = chat_init[cur]
